@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <title>Sign Up - SmartFood AI Tracker</title>
+</head>
+<body class="glass">
+  <div class="card">
+    <h2>Create Account</h2>
+    {% if error %}<p class="error">{{ error }}</p>{% endif %}
+    <form method="POST">
+      <input type="email" name="email" placeholder="Enter Gmail" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <input type="number" name="age" placeholder="Age" required>
+      <input type="number" step="0.1" name="weight" placeholder="Current Weight (kg)" required>
+      <input type="number" step="0.1" name="target" placeholder="Target Weight (kg)" required>
+      <input type="number" name="weeks" placeholder="Weeks" required>
+      <button type="submit">Sign Up</button>
+    </form>
+    <a href="{{ url_for('login') }}">Already have an account?</a>
+  </div>
+</body>
+</html>

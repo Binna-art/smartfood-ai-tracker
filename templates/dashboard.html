@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</head>
+<body class="glass">
+  <header>
+    <h2>SmartFood AI Tracker</h2>
+    <a href="{{ url_for('logout') }}">Logout</a>
+  </header>
+
+  <main>
+    <div class="circle" id="progressCircle" data-goal="{{ daily }}">0</div>
+    <p>Today's calorie goal: {{ daily }}</p>
+
+    <form id="uploadForm">
+      <input type="file" name="image" accept="image/*" required>
+      <button type="submit">Analyze Food</button>
+    </form>
+
+    <div id="result"></div>
+
+    <h3>Previous Logs</h3>
+    <ul>
+      {% for name, cal, date in logs %}
+      <li>{{ date }}: {{ name }} - {{ cal }} cal</li>
+      {% endfor %}
+    </ul>
+  </main>
+</body>
+</html>

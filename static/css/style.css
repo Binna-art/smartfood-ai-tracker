@@ -1,0 +1,54 @@
+body {
+  font-family: Poppins, sans-serif;
+  background: url('../images/foodbg.jpg') center/cover no-repeat;
+  backdrop-filter: blur(10px);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.glass {
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+}
+
+.card {
+  padding: 30px;
+  width: 300px;
+  text-align: center;
+}
+
+input, button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+button {
+  background: linear-gradient(135deg, #00f260, #0575e6);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  transform: scale(1.05);
+}
+.error { color: #ff6b6b; }
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: conic-gradient(#00f260 0%, #0575e6 0%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  font-size: 24px;
+}

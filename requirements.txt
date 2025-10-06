@@ -1,0 +1,8 @@
+Flask
+requests
+opencv-python
+pillow
+torch
+transformers
+gunicorn
+sqlite3-bro
