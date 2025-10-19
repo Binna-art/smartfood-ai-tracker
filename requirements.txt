@@ -5,4 +5,4 @@ pillow
 torch
 transformers
 gunicorn
-sqlite3-bro
+
